@@ -30,3 +30,18 @@
 # Findings
 ### Summary Statistics
 ![](https://github.com/jason-huynh83/Toronto-Crime/blob/master/Images/Crimes1.PNG) ![](https://github.com/jason-huynh83/Toronto-Crime/blob/master/Images/Crime2.PNG)
+Here are some summary statistics for the crimes involved in the city of Toronto according to the Toronto Police dataset. As you can see above, there seems to be a growing trend throughout the years in some of the crimes involved. Thefts, Auto Thefts, and Assaults per year seem to be at a growing rate every year from 2014. 
+
+![](https://github.com/jason-huynh83/Toronto-Crime/blob/master/Images/assault_nbh_pop.PNG) ![](https://github.com/jason-huynh83/Toronto-Crime/blob/master/Images/auto_nbh_pop.PNG)
+Next we decided to look at the crimes committed vs. the population of the neighbourhood to answer the question whether or not population count influenced more crimes committed. From analyzing the scatterplots, there doesn't seem to be a direct correlation between the population size and number of crimes committed. We are able to confirm this later by conducting a T-Test.
+
+### Geographic Statistics
+Lastly, we can view the geographical statistics for crimes on a map of Toronto. A choropleth map of the assaults and thefts in Toronto can be seen below:
+![](https://github.com/jason-huynh83/Toronto-Crime/blob/master/Images/theft_map.PNG)
+From this map, we can see the darker purple colour indicates a higher amount of crimes involved. The neighbourhood of West Humber-Clairville and Waterfront Communities have the highest amount of thefts reported.
+
+![](https://github.com/jason-huynh83/Toronto-Crime/blob/master/Images/Assault_map.PNG)
+From this map, we can see the darker purple colour indicates a higher amount of crimes involved. The neighbourhood of Waterfront Communities have the highest amount of assaults reported.
+
+# Usage 
+This project is best viewed in a notebook viewer, which can be accessed [here](https://nbviewer.jupyter.org/github/jason-huynh83/Toronto-Crime/blob/master/Toronto_Crime.ipynb) as there are plotly graphs that are not shown.
