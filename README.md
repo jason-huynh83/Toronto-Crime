@@ -29,3 +29,4 @@
 	- Shape_Length: Length of each neighbourhood
 # Findings
 ### Summary Statistics
+![](https://github.com/jason-huynh83/Toronto-Crime/blob/master/Images/Crimes1.PNG) ![](https://github.com/jason-huynh83/Toronto-Crime/blob/master/Images/Crime2.PNG)
