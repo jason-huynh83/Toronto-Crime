@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Toronto Crime Analysis</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+
+<style>
+
+h2{
+    text-transform: uppercase;
+    color:whitesmoke;
+}
+
+body {
+    background-color: #5de6de;
+    background-image: linear-gradient(315deg, #5de6de 0%, #b58ecc 74%);
+    color:black;
+        display: block;
+        font-family: 'Didact Gothic';font-size: 22px;
+        font-size: 1em;
+        font-weight: 400;
+        letter-spacing: 0.2em;
+        margin: 0 0 0.7em 0;
+        text-align: center;
+
+
+  }
+
+legend {
+    background-color: #000;
+    color: black;
+    text-transform: uppercase;
+    padding: 3px 6px;
+}
+
+.output {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+    margin: .4rem;
+}
+
+
+form {
+    margin: auto;
+    width: 60%;
+
+}
+.result {
+    margin: auto;
+    width: 60%;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+fieldset 
+	{
+		border: 1px solid #ddd !important;
+		margin: 0;
+		padding: 10px;       
+		position: relative;
+		border-radius:4px;
+		background-color:white;
+		padding-left:10px!important;
+	}	
+	
+		legend
+		{
+			font-size:14px;
+			font-weight:bold;
+			margin-bottom: 0px; 
+			width: 35%; 
+			border: 1px solid #ddd;
+			border-radius: 4px; 
+			padding: 5px 5px 5px 10px; 
+			background-color: #ffffff;
+		}
+
+button{
+  display: inline-block;
+  text-align: center;
+  padding: 15px 25px;
+  font-size: 24px;
+  font-family:'Didact Gothic';font-size: 22px;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-image: linear-gradient(315deg, #5de6de 0%, #b58ecc 74%);
+  text-transform: uppercase;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+    
+input{
+    background-image: linear-gradient(315deg, #5de6de 0%, #b58ecc 74%);
+    border: linear-gradient(315deg, #5de6de 0%, #b58ecc 74%);
+    width: 375px;
+    height: 38px;
+}
+
+</style>
+<head>
+    <h2>Predicting the type of crime in Toronto</h2>
+</head>
+<form action="{{ url_for('main') }}" method="POST">
+    <fieldset>
+        <legend>Input values:</legend>
+        The premise of where the crime (Commercial, Other, Apartment, House, Outside):
+    <br>
+        <input name="premisetype" type="text" step=".01" required>
+        <br>
+        <br> The year the crime was reported (2014-2019):   <br>
+        <input name="reportedyear" type="text" step=".01" required>
+        <br>
+        <br> The month the crime was reported (ex: March):  <br>
+        <input name="reportedmonth" type="text" step=".01" required>
+        <br>
+        <br> The day the crime was reported (ex: 23):   <br>
+        <input name="reportedday" type="text" step=".01" required>
+        <br>
+        <br> The day of week the crime was reported (ex: Tuesday):   <br>
+        <input name="reporteddayofweek" type="text" step=".01" required>
+        <br>
+        <br> The hour the crime was reported (0-24):     <br>
+        <input name="reportedhour" type="text" step=".01" required>
+        <br>
+        <br> Was the crime reported same day it occurred? (1/0) (ex:1=Yes,0=No):    <br>
+        <input name="same_day_reported" type="number" step=".01" required><br><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict!</button>
+        <br><br><br>
+    </fieldset>
+</form>
+<br>
+<div class="result" align="center">
+  <br>
+     <br> Predicted Crime:
+     <p style="font-size:50px" step=".01">{{ result }}</p>
+</div>
+</html>
