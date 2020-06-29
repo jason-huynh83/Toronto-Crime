@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<style>
+form {
+    margin: auto;
+    width: 35%;
+}
+.result {
+    margin: auto;
+    width: 35%;
+    border: 1px solid #ccc;
+}
+</style>
+<head>
+    <title>Predicting the type of crime in Toronto</title>
+</head>
+<form action="{{ url_for('main') }}" method="POST">
+    <fieldset>
+        <legend>Input values:</legend>
+        The premise of where the crime (Commercial, Other, Apartment, House, Outside):
+        <input name="premisetype" type="text" step=".01" required>
+        <br>
+        <br> The year the crime was reported:
+        <input name="reportedyear" type="text" step=".01" required>
+        <br>
+        <br> The month the crime was reported:
+        <input name="reportedmonth" type="text" step=".01" required>
+        <br>
+        <br> The day the crime was reported:
+        <input name="reportedday" type="text" step=".01" required>
+        <br>
+        <br> The day of week the crime was reported:
+        <input name="reporteddayofweek" type="text" step=".01" required>
+        <br>
+        <br> The hour the crime was reported:
+        <input name="reportedhour" type="text" step=".01" required>
+        <br>
+        <br> Was the crime reported same day it occurred? (1/0):
+        <input name="same_day_reported" type="number" step=".01" required>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict!</button>
+    </fieldset>
+</form>
+<br>
+<div class="result" align="center">
+  <br>
+     <br> Predicted Crime:
+     <p style="font-size:50px" step=".01">{{ result }}</p>
+</div>
+</html>
