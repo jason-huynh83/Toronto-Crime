@@ -1,5 +1,6 @@
 # Toronto Crime Analysis and Machine Learning
 The webapp for this project can be viewed [here](https://trtcrimeanalysis.netlify.app/)
+![](Images/webapp.PNG)
 ## Background
 - This project was intended to have a deeper understanding of crime in the city of Toronto. In addition, it was intended to direct police reinforcement to understand where most crimes occur. As a result, police reinforcement can reposition and station officers accordingly to neighbourhoods where there is a higher crime rate.
 - In addition, based on the data we will create a Machine Learning Classification model that will predict the type of crime that was involved based on the day/month/hour it was reported. Ultimately, we hope this model will navigate and guide police reinforcement on what type of crime they are dealing with.
