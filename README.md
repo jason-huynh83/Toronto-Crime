@@ -6,7 +6,7 @@ The webapp for this project can be viewed [here](https://trtcrimeanalysis.netlif
 - This project was intended to have a deeper understanding of crime in the city of Toronto. In addition, it was intended to direct police reinforcement to understand where most crimes occur. As a result, police reinforcement can reposition and station officers accordingly to neighbourhoods where there is a higher crime rate.
 - In addition, based on the data we will create a Machine Learning Classification model that will predict the type of crime that was involved based on the day/month/hour it was reported. Ultimately, we hope this model will navigate and guide police reinforcement on what type of crime they are dealing with.
 # Code and Resources Used
-- Python Version 3.8
+- Python Version 3.7
 - Jupyter Notebook
 - Packages: pandas, numpy, sklearn, matplotlib, seaborn, folium
 # The Dataset
